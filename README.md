@@ -24,7 +24,7 @@ How to use
   ♟️ As soon as you drop the piece, the overlay re-engages and the board locks again.
 
 5. **Free/Locked toggle**
-  ♟️ Click **Free/Locked** to permanently unlock and click again to re-lock. You might need this during tense last second games.
+  ♟️ Click **Free/Locked** to permanently unlock and click again to re-lock. You might need this during opening or tense last second games.
 
 
 How to install
