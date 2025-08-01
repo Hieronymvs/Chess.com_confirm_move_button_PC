@@ -6,7 +6,7 @@ Locks the Chess.com board until you confirm each move, with a lock‐release tog
 This extension works purely by layering an overlay above the board; it does not intercept or alter any network calls.
 As far as I am aware, using this add-on does not violate any Fair Play Policy.
 
-
+The buttons appear next to the username.
 
 How to use 
 
@@ -16,8 +16,8 @@ How to use
 2. **Board is locked by default**
   ♟️You’ll see the 🚫 cursor over the board, preventing any accidental moves.
 
-3. **Release Move for one move (and legal-move hints)**
-  ♟️Click **Release Move** → the board unlocks for a single move.
+3. **[Release Move] for one move (and legal-move hints)**
+  ♟️Click [Release Move] → the board unlocks for a single move.
   While unlocked, you can click a board piece to see Chess.com’s built-in legal-move dots and drag to move.
 
 4. Auto-relock after your move
@@ -27,11 +27,9 @@ How to use
   ♟️ Click **Free/Locked** to permanently unlock and click again to re-lock. You might need this during tense last second games.
 
 
-
 How to install
 
-❗Please note that the full add-on is not released yet and that you will need to reinstall this add-on every time starting a new browser session. Closing the browser will uninstall the add-on.
-
+❗Please note that the full add-on is not released yet and that you will need to reinstall this add-on every time you start a new browser session. Closing the browser will uninstall the add-on.
 
 Firefox 
 1. **Download the code**
@@ -55,7 +53,7 @@ Firefox
 Chrome
 
 1. **Download the code**
-   1.1. Open your GitHub repository in Chrome and click **Code → Download ZIP**
+   1.1. Click **Code → Download ZIP**
    1.2. Unzip the downloaded archive to a folder on your computer
 
 2. **Load into Chrome**
