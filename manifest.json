@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Chess.com Confirm Move Button",
+  "version": "1.0.4",
+  "description": "Lock the board until you click the button to confirm your move.",
+  "host_permissions": ["https://www.chess.com/*"],
+  "permissions": ["scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.chess.com/*"],
+      "js": ["content-script.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
