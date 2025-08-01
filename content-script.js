@@ -4,6 +4,12 @@
 console.log('[Chess Confirm] overlay script loaded');
 
 (function() {
+  // Prevent multiple injections
+  if (document.getElementById('chess-confirm-wrapper')) {
+    console.log('[Chess Confirm] already injected—skipping');
+    return;
+  }
+
   let permanentRelease = false;
   let tick = 0;
 
@@ -25,6 +31,7 @@ console.log('[Chess Confirm] overlay script loaded');
 
     // 1) Overlay
     const overlay = document.createElement('div');
+    overlay.id = 'chess-confirm-overlay';
     Object.assign(overlay.style, {
       position:      'absolute',
       top:           '0',
@@ -42,6 +49,7 @@ console.log('[Chess Confirm] overlay script loaded');
 
     // 2) Prepare wrapper for buttons (inline flex, pushed right)
     const wrapper = document.createElement('div');
+    wrapper.id = 'chess-confirm-wrapper';
     Object.assign(wrapper.style, {
       display:    'flex',
       alignItems: 'center',
@@ -114,15 +122,15 @@ console.log('[Chess Confirm] overlay script loaded');
     btnEmergency.addEventListener('click', () => {
       permanentRelease = !permanentRelease;
       if (permanentRelease) {
-        overlay.style.pointerEvents   = 'none';
-        overlay.style.cursor          = 'default';
-        btnEmergency.textContent      = 'Lock OFF';
-        btnEmergency.style.background = '#080';
-        btnRelease.disabled           = true;
+        overlay.style.pointerEvents    = 'none';
+        overlay.style.cursor           = 'default';
+        btnEmergency.textContent       = 'Lock OFF';
+        btnEmergency.style.background  = '#080';
+        btnRelease.disabled            = true;
         console.log('[Chess Confirm] emergency permanent release ON');
       } else {
-        btnEmergency.textContent      = 'Lock ON';
-        btnEmergency.style.background = '#b00';
+        btnEmergency.textContent       = 'Lock OFF';
+        btnEmergency.style.background  = '#b00';
         console.log('[Chess Confirm] emergency permanent release OFF');
         lockBoard();
       }
