@@ -1,4 +1,4 @@
-# Chess.com_confirm_move_button_PC  
+# Chess.com confirm move button PC  
 
 
 Locks the Chess.com board until you confirm each move, with a lock‐release toggle to help you practice precision and avoid blunders.
